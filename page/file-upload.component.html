@@ -1,0 +1,144 @@
+<section>
+    <div class="tabs">
+        <button class="tab-control" (click)="alumni = false">
+            Project
+        </button><!--
+        --><button class="tab-control" (click)="alumni = true">
+        Alumni
+        </button>
+    </div>
+
+    <article>
+        <div class="controls">
+            <button (click)="onClickSave( alumni )">Save</button>
+            <button>Clear</button>
+        </div>
+        <div class="project" *ngIf="!alumni">
+
+
+            <div>
+
+                <span>Project Files Selection</span>
+            </div>
+            <span>(photo, video, plans or diagrams) <button>Add Hyperlink</button></span>
+            <div class="file-upload">
+                <div class="right-panel alumni-right">
+                    <!--<div class="form">-->
+                        <!--<div class="hlabel">Project Highlight</div>-->
+                        <!--<form>-->
+                            <!--<div><label for="nature">Nature <span>*</span></label>&lt;!&ndash;-->
+                        <!--&ndash;&gt;<select name="nature" id="nature">-->
+                                <!--<option value=" ">&nbsp;</option>-->
+                                <!--<option value="Environmental Sustainability">Environmental Sustainability</option>-->
+                                <!--<option value="Energy Availability">Energy Availability</option>-->
+                                <!--<option value="Food and Water Security">Food and Water Security</option>-->
+                            <!--</select>&lt;!&ndash;-->
+                            <!--&ndash;&gt;</div>-->
+                            <!--<div><label for="industry">Industry <span>*</span></label>&lt;!&ndash;-->
+                        <!--&ndash;&gt;<select name="industry" id="industry">-->
+                                <!--<option value=" ">&nbsp;</option>-->
+                                <!--<option value="Construction ">Construction </option>-->
+                                <!--<option value="System">System</option>-->
+                            <!--</select>&lt;!&ndash;-->
+                            <!--&ndash;&gt;</div>-->
+                            <!--<div><label for="region">Region <span>*</span></label>&lt;!&ndash;-->
+                        <!--&ndash;&gt;<select name="region" id="region">-->
+                                <!--<option value=" ">&nbsp;</option>-->
+                                <!--<option value="Private">Private</option>-->
+                                <!--<option value="Public">Public</option>-->
+                                <!--<option value="Public-Private">Public-Private</option>-->
+                            <!--</select>&lt;!&ndash;-->
+                            <!--&ndash;&gt;</div>-->
+                        <!--</form>-->
+                    <!--</div>-->
+
+                    <dynamic-form></dynamic-form>
+                </div>
+                <file-upload #fileUpload
+                [showFileSelectionLabel]="false"
+                ></file-upload>
+            </div>
+        </div>
+        <div class="alumni" *ngIf="alumni">
+
+            <div>
+
+                <img class="img " src="static/resources/img/u770.png">
+                <span>Current Project: </span><label> Design of the Ninoy Aquino International Airport Expressway (NAIAX)</label>
+
+                <div class="form">
+                    <form>
+                        <div class="right-panel">
+                            <span class="alumnus-photo">Alumnus Photo</span>
+                            <img #img [src]="alumnusPhotoPath" alt="photo">
+                            <span class="fa fa-camera upload" title="Add Photo" (click)="userFile.click()"></span>
+                            <input #userFile type="file" (change)="onChangeAlumnusPhoto( $event )">
+                        </div>
+                        <div><label for="alumnus_last_name">Last Name <span>*</span></label><input id="alumnus_last_name" type="text"></div>
+                        <div><label for="alumnus_first_name">First Name <span>*</span></label><input id="alumnus_first_name" type="text"></div>
+                        <div><label for="alumnus_display_name">Display Name <span>*</span></label><input id="alumnus_display_name" type="text"></div>
+                        <div><label for="Alumnus_program">School/Program <span>*</span></label><!--
+                        --><select name="Alumnus_program" id="Alumnus_program">
+                                <option value="0">Select School/Program</option>
+                            </select>
+                        </div>
+                        <div><label for="Alumnuscountry">Country Chapter <span>*</span></label><!--
+                        --><select name="Alumnuscountry" id="Alumnuscountry">
+                            <option value="0">Select Country Chapter</option>
+                        </select>
+                        </div>
+                        <div><label for="alumnus_graduated">Year Graduated <span>*</span></label><input id="alumnus_graduated" type="text" pattern="[0-9]{4}"></div>
+                        <div><label for="alumnus_email">Contact Email <span>*</span></label><input id="alumnus_email" type="email"></div>
+                        <div><label for="alumnus_phonenumber">Contact Number </label><input id="alumnus_phonenumber" type="text" pattern="[0-9]{12}"></div>
+                        <div><label for="alumnus_account">FB Account </label><input id="alumnus_account" type="text"></div>
+                        <div><label for="alumnus_org">Organization </label><input id="alumnus_org" type="text"></div>
+                        <div><label for="alumnus_pos">Position </label><input id="alumnus_pos" type="text"></div>
+                        <div><label for="alumnus_web">Website </label><input id="alumnus_web" type="text"></div>
+                    </form>
+                </div>
+                <div class="hr"><hr/><button (click)="addAlumnus = !addAlumnus" class="btn-caret" title="Add Alumnus Proponent">Add Alumnus Proponent <i class="fa fa-angle-down" aria-hidden="true" *ngIf="!addAlumnus"></i><!--
+            --><i class="fa fa-angle-up" aria-hidden="true" *ngIf="addAlumnus"></i><!--
+            --></button></div>
+
+                <div *ngIf="addAlumnus">
+
+                    <div class="form">
+                        <form>
+                            <div class="right-panel">
+                                <span class="alumnus-photo">Alumni Photo</span>
+                                <img #imgAlumni [src]="alumniPhotoPath" alt="photo">
+                                <span  class="fa fa-camera upload" title="Add Photo" (click)="userFileAlumni.click()"></span>
+                                <input #userFileAlumni (change)="onChangeAlumniPhoto( $event )" type="file">
+                            </div>
+                            <div><label for="last_name">Last Name <span>*</span></label><input id="last_name" type="text"></div>
+                            <div><label for="first_name">First Name <span>*</span></label><input id="first_name" type="text"></div>
+                            <div><label for="display_name">Display Name <span>*</span></label><input id="display_name" type="text"></div>
+                            <div><label for="program">School/Program <span>*</span></label><!--
+                        --><select name="program" id="program">
+                                <option value="0">Select School/Program</option>
+                            </select>
+                            </div>
+                            <div><label for="country">Country Chapter <span>*</span></label><!--
+                        --><select name="country" id="country">
+                                <option value="0">Select Country Chapter</option>
+                            </select>
+                            </div>
+                            <div><label for="graduated">Year Graduated <span>*</span></label><input id="graduated" type="text" pattern="[0-9]{4}"></div>
+                            <div><label for="email">Contact Email <span>*</span></label><input id="email" type="email"></div>
+                            <div><label for="phonenumber">Contact Number </label><input id="phonenumber" type="text" pattern="[0-9]{12}"></div>
+                            <div><label for="account">FB Account </label><input id="account" type="text"></div>
+                            <div><label for="org">Organization </label><input id="org" type="text"></div>
+                            <div><label for="pos">Position </label><input id="pos" type="text"></div>
+                            <div><label for="web">Website </label><input id="web" type="text"></div>
+                        </form>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+</section>

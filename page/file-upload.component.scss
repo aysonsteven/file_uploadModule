@@ -1,0 +1,228 @@
+section{
+  *{
+    font-family: 'Candara Bold', 'Candara Regular', 'Candara';
+  }
+  button{
+    outline: none;
+  }
+  margin: 15px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  div.tabs{
+    button.tab-control{
+      border: none;
+      //position: absolute;
+      //left: 0px;
+      //top: 0px;
+      width: 100px;
+      height: 30px;
+      background: inherit;
+      background-color: rgba(255, 255, 255, 0.717647058823529);
+      box-sizing: border-box;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(207, 218, 224, 1);
+      border-radius: 4px;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+
+      font-weight: 700;
+      font-style: normal;
+      font-size: 14px;
+      outline: none;
+    }
+  }
+  article{
+    width: 94%;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    div.hr{
+      text-align: center;
+    }
+    hr{
+      border-color: #d2d2d2;
+      width: 80%;
+      display: inline-block;
+    }
+    button.btn-caret{
+      display: inline;
+      position: relative;
+      bottom: 16px;
+      padding: 5px;
+      outline: none;
+      background-color: white;
+      box-sizing: border-box;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(153, 153, 153, 1);
+      border-radius: 4px;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-family: 'Candara Bold', 'Candara Regular', 'Candara';
+      font-weight: 700;
+      font-style: normal;
+      font-size: 12px;
+      color: #000000;
+    }
+    div.controls{
+      float: right;
+    }
+    div.project, div.alumni{
+      span{
+        font-family: 'Candara Italic', 'Candara Regular', 'Candara';
+        font-weight: 400;
+        font-style: italic;
+        button{
+          width: 95px;
+          height: 21px;
+          background: inherit;
+          background-color: rgba(228, 228, 228, 1);
+          box-sizing: border-box;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgba(153, 153, 153, 1);
+          border-radius: 4px;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          font-family: 'Candara Bold', 'Candara Regular', 'Candara';
+          font-weight: 700;
+          font-style: normal;
+          font-size: 12px;
+          color: #000000;
+          display: inline;
+        }
+      }
+      div{
+        span{
+          font-family: 'Candara Bold', 'Candara Regular', 'Candara';
+          font-weight: 700;
+          font-style: normal;
+        }
+      }
+    }
+    div.form{
+      width: 98%;
+      margin-left: auto;
+      form{
+        img{
+          border: 1px solid #d2d2d2;
+          height: 200px;
+          width: 200px;
+        }
+        div{
+          margin-bottom: 5px;
+          margin-top: 5px;
+          label{
+            width: 160px;
+            span{
+              color: #ff0000;
+            }
+          }
+          input, select{
+            padding: 1px 0px;
+            width: 340px;
+            outline: none;
+          }
+        }
+      }
+    }
+    div.right-panel{
+      float: right;
+      input[type=file]{
+        visibility: hidden;
+        position: absolute;
+      }
+      span.alumnus-photo{
+        position: relative;
+        bottom: 190px;
+        right: 30px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.alumni-right{
+  width: 40%;
+  hr{
+
+  }
+  form{
+    width: 95%;
+    margin-left: auto;
+    img{
+      border: 1px solid #d2d2d2;
+      height: 200px;
+      width: 200px;
+    }
+    div{
+      margin-bottom: 5px;
+      margin-top: 5px;
+      label{
+        width: 130px !important;
+        span{
+          color: #ff0000;
+        }
+      }
+      input, select{
+        padding: 1px 0px;
+        width: 380px !important;
+        outline: none;
+      }
+    }
+  }
+  .form{
+    .hlabel{
+      font-family: 'Candara Bold', 'Candara Regular', 'Candara';
+      font-weight: 700;
+      font-style: normal;
+      font-size: 14px;
+      color: #2F4151;
+    }
+  }
+}
+
+div.controls{
+  button{
+    width: 95px;
+    height: 21px;
+    background: inherit;
+    //background-color: rgba(228, 228, 228, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(153, 153, 153, 1);
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Candara Bold', 'Candara Regular', 'Candara';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    color: #000000;
+    display: inline;
+  }
+}
+
+.fa{
+  font: normal normal normal 14px/1 FontAwesome !important;
+}
+
+span.upload{
+  font-size: 18px !important;
+  position: relative !important;
+  right: 35px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+dynamic-form{
+  display: block;
+  position: absolute;
+}

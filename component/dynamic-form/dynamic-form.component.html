@@ -1,0 +1,10 @@
+<div>
+    <div *ngFor="let form of caseReviewSetGroup; let i = index">
+        <div style="border: 1px solid black;">{{ form.reviewSetGroupName }}</div>
+            <div *ngFor="let subForm of form.casefields" >
+                <div>
+                    {{subForm.fieldName}}
+                </div>
+            </div>
+    </div>
+</div>

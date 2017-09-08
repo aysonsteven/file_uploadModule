@@ -1,0 +1,33 @@
+form{
+  width: 95%;
+  margin-left: auto;
+  img{
+    border: 1px solid #d2d2d2;
+    height: 200px;
+    width: 200px;
+  }
+  div{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    label{
+      width: 130px !important;
+      span{
+        color: #ff0000;
+      }
+    }
+    input, select{
+      padding: 1px 0px;
+      width: 350px !important;
+      outline: none;
+    }
+  }
+}
+.form{
+  .hlabel{
+    font-family: 'Candara Bold', 'Candara Regular', 'Candara';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    color: #2F4151;
+  }
+}

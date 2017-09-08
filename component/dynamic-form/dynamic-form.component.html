@@ -1,10 +1,13 @@
-<div>
-    <div *ngFor="let form of caseReviewSetGroup; let i = index">
-        <div style="border: 1px solid black;">{{ form.reviewSetGroupName }}</div>
-            <div *ngFor="let subForm of form.casefields" >
-                <div>
-                    {{subForm.fieldName}}
-                </div>
-            </div>
-    </div>
+
+
+<div class="form" *ngFor="let form of caseReviewSetGroup; let i = index">
+    <div class="hlabel">{{ form.reviewSetGroupName }}</div>
+    <form>
+        <div *ngFor="let subForm of form.casefields"><label >{{ subForm.fieldName }} <span>*</span></label><!--
+                        --><select name="nature" >
+            <option value=" ">&nbsp;</option>
+            <option *ngFor="let option of subForm.fieldOptions"  [value]="option.fieldOptionObjectId">{{ option.fieldOptionLabel }}</option>
+        </select><!--
+     --></div>
+    </form>
 </div>
